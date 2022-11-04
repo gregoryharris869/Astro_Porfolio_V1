@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import homeImg from "../img/cesar-rincon-XHVpWcr5grQ-unsplash.jpg";
+---
+
+<Layout title="About">
+    <!-- about section -->
+<section class="about-section active ">
+    <div class="about">
+        <div class="about-img-container">
+            <img src={homeImg} class="about-img" alt="">
+            <button class="download-cv-btn">downlaod cv</button>
+        </div>
+        <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusantium quod eos ipsum earum a, eligendi odit, rerum voluptate quo nemo, iste tempora pariatur? Minima saepe excepturi quas suscipit iusto reprehenderit voluptas minus ducimus obcaecati? Quo laudantium voluptatum quis, esse quibusdam corporis. Expedita totam quidem commodi sed iste reprehenderit, eaque quisquam, esse doloremque inventore alias rem sint eum possimus pariatur blanditiis tempore adipisci corporis quasi, quis suscipit dolorem. Delectus aliquam sapiente natus alias distinctio consectetur dicta itaque facilis odit ullam a vero inventore ab deserunt eligendi molestiae non aut maiores amet adipisci et, sed nostrum ratione. Praesentium beatae numquam rerum!</p>
+    </div>
+</section>
+</Layout>
+
+<style>
+    .about-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 0;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.about{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 65%;
+    grid-gap: 40px;
+}
+
+.about-img-container{
+    position: relative;
+}
+
+.about-info{
+    color: #fff;
+    opacity: 0.6;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.about-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.download-cv-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.download-cv-btn:hover{
+    background: #000;
+}
+</style>
